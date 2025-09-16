@@ -1,0 +1,74 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Queuing System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            color: white;
+            padding: 14px 24px;
+            margin: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .staff { background: #28a745; }
+        .staff:hover { background: #218838; }
+        
+        .admin { background: #007bff; }
+        .admin:hover { background: #0056b3; }
+        
+        .kiosk { background: #ffc107; color: #000; }
+        .kiosk:hover { background: #e0a800; }
+        
+        .display { background: #dc3545; }
+        .display:hover { background: #c82333; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bank Queuing System</h2>
+        <p>Select where you want to go:</p>
+
+        <!-- Staff Login -->
+        <a href="login.php?type=staff" class="btn staff">Staff Login</a>
+        
+        <!-- Admin Login -->
+        <a href="login.php?type=admin" class="btn admin">Admin Login</a>
+        
+        <!-- Kiosk (ticket generation for clients) -->
+        <a href="kiosk.php" class="btn kiosk">Kiosk</a>
+        
+        <!-- Display (customer waiting screen) -->
+        <a href="display.php" class="btn display">Display</a>
+    </div>
+</body>
+</html>
